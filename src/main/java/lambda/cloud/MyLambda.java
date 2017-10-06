@@ -14,25 +14,25 @@ import lambda.cloud.MyLambda.Output;
  */
 public class MyLambda implements RequestHandler<Input, Output> {
 
-	@Override
-	public Output handleRequest(Input in, Context context) {
+  @Override
+  public Output handleRequest(Input in, Context context) {
 
-		final Output out = new Output();
-		out.in = in;
-		out.fullName = in.firstName + "_" + in.lastName;
+    final Output out = new Output();
+    out.in = in;
+    out.fullName = in.firstName + "_" + in.lastName;
 
-		return out;
-	}
+    return out;
+  }
 
-	public static class Input {
-		public String firstName;
-		public String lastName;
-	}
+  public static class Input {
+    public String firstName;
+    public String lastName;
+  }
 
-	public static class Output {
-		public Input in;
-		public String fullName;
+  public static class Output {
+    public Input in;
+    public String fullName;
 
-	}
+  }
 
 }
